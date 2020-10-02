@@ -1,24 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+<RelativeLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/counterTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:layout_centerInParent="true"/>
-    <Button
-        android:id="@+id/addCounterBTN"
-        android:text="Add count"
-        android:textAllCaps="true"
+    android:orientation="vertical"
+    android:background="@color/bg_gradient_light"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            style="@style/title"
+            android:text="Авторизация" />
 
+        <TextView
+            style="@style/description"
+            android:text="Введите свое имя пользователя" />
+
+        <EditText
+            android:id="@+id/searchET"
+            style="@style/edit_text"
+            android:hint="Имя пользователя" />
+
+        <Button
+            android:id="@+id/searchBTN"
+            style="@style/button"
+            android:text="Войти" />
+
+        <ImageView
+            android:id="@+id/imageIV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:src="@mipmap/auth_image"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/progressRL"
+        android:visibility="gone"
+        android:background="@color/bg_gradient_light"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
 
 </RelativeLayout>
